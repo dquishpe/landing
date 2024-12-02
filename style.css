@@ -1,84 +1,69 @@
-/*
-Theme Name: Kaira - Bootstrap 5 Fashion Store HTML CSS Template
-Theme URI: https://templatejungle.com/
-Author: TemplatesJungle
-Author URI: https://templatejungle.com/
-Description: Kaira - Bootstrap 5 Fashion Store HTML CSS Template is specially designed product packaged for Fashion Stores by TemplatesJungle.
-Version: 1.1
-*/
-
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
-
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
-
-/*------------------------------------------------
-CSS STRUCTURE:
-
-1. VARIABLES
-2. GENERAL TYPOGRAPHY
-
---------------------------------------------------------------*/
 body {
-  --heading-font: "Marcellus", Roboto, sans-serif;
+  --heading-font: "Dancing Script";
   --heading-font-weight: 400;
-  --heading-color: #111;
+  --heading-color: #402b11;
   --heading-line-height: 1.24;
+  --heading-line-color: #402b11;
 
   --swiper-theme-color: #8C907E;
 
   /* bootstrap */
-  --bs-body-font-family: "Jost", Roboto, sans-serif;
-  --bs-body-font-size: 18px;
+  --bs-body-font-family: "Nunito";
+  --bs-body-font-size: 20px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #8f8f8f;
+  --bs-body-color: #000000; /*color de los íconos y letritas pequeñas q aparecen */
   --bs-body-color-rgb: 143, 143, 143;
 
-  --bs-primary: #8C907E;
-  --bs-secondary: #6c757d;
+  --bs-primary: #8C907E; /* Define los colores principales para botones, enlaces y elementos destacados. */ 
+  --bs-secondary: #402b11;
   --bs-black: #111;
   --bs-light: #F1F1F0;
-  --bs-dark: #212529;
+  --bs-dark: #402b11;
   --bs-gray: #9aa1a7;
-  --bs-gray-dark: #51565b;
+  --bs-gray-dark: #295d91;
 
   --bs-primary-rgb: 140, 144, 126;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 64, 43, 17;
   --bs-black-rgb: 17, 17, 17;
-  --bs-light-rgb: 241, 241, 240;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-light-rgb: 255, 235, 192;
+  --bs-dark-rgb: rgb(64, 43, 17);
 
-  --bs-link-color: #111;
-  --bs-link-color-rgb: 17, 17, 17;
+  --bs-link-color: rgb(0, 0, 0);
+  --bs-link-color-rgb: 17,17,17;
   --bs-link-decoration: underline;
   --bs-link-hover-color: #111;
   --bs-link-hover-color-rgb: 17, 17, 17;
+
+  --bs-footer-color: #ffebc0;
 }
 
 body {
   letter-spacing: 0.03rem;
+  margin: 0;
+  padding: 0;
 }
 
-h1,
-.h1,
+:root {
+  --footer-text-color: #ffffff;;
+}
+
 h2,
 .h2,
 h3,
 .h3,
 h4,
 .h4,
-h5,
-.h5,
 h6,
 .h6 {
-  font-family: var(--heading-font);
+  font-family: var(--bs-body-font-family);
   font-weight: var(--heading-font-weight);
   color: var(--heading-color);
   line-height: var(--heading-line-height);
+}
+
+h5,.h5{
+  color: var(--bs-light-rgb);
 }
 
 h1.light,
@@ -109,7 +94,9 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 4.5rem;
+  font-size: 8rem;
+  align-content: center;
+  text-align: center;
 }
 
 h2,
@@ -141,6 +128,101 @@ a {
   text-decoration: none;
 }
 
+.features{
+  background-color: var(--bs-secondary);
+} 
+
+.categories {
+  background-color: var(--bs-secondary);
+}
+
+.new-arrival {
+  background-color: var(--bs-secondary);
+}
+
+
+/* Contenedor del texto */
+.text-container {
+  flex: 1; /* Ocupa un espacio proporcional */
+  max-width: 40%; /* Limita el ancho máximo */
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: 2000;
+  color: var(--bs-secondary);
+  /* text-shadow: 2px 2px 5px var(--bs-black); */
+  letter-spacing: 0.1rem;
+}
+
+p.lead {
+  font-size: 1.8rem;
+  color: var(--bs-body-color);
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Contenedor del texto */
+.text-container {
+  flex: 1; /* Ocupa un espacio proporcional */
+  max-width: 40%; /* Limita el ancho máximo */
+  text-align: center; /* Centra el texto */
+}
+
+button.btn-primary {
+  font-family: var(--bs-body-font-family);
+  font-size: 24px; /* Tamaño de texto más grande */
+  font-weight: bold;
+  padding: 15px 30px; /* Más espacio interno */
+  border-radius: 50px; /* Bordes redondeados */
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: var(--bs-light);
+  text-shadow: 1px 1px 3px var(--bs-black);
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+  width: auto;
+}
+
+button.btn-primary:hover {
+  background-color: var(--bs-dark);
+  transform: scale(1.1);
+}
+
+.container .text-start {
+  text-align: center !important; /* Centra el contenido */
+}
+
+button {
+  display: block; /* Para centrar */
+  margin: 20px auto; /* Márgenes automáticos para centrar */
+}
+
+.lanzamientos{
+  margin-top: 40px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid var(--bs-secondary);
+  padding: 8px;
+  text-align: center;
+  background-color: #fde89d;
+}
+
+.results-table th {
+  color: var(--bs-white);
+  background-color: var(--bs-secondary);
+  font-weight: bold;
+}
+
+
 /* container fluid */
 .container-fluid {
   /* width: 98%; */
@@ -151,19 +233,20 @@ a {
 .dropdown-menu {
   --bs-dropdown-border-radius: 0;
   --bs-dropdown-border-width: 0;
+  background-color: var(--bs-secondary);
 }
 
 .dropdown-item {
   --bs-dropdown-item-padding-y: 0.25rem;
   --bs-dropdown-item-padding-x: 1rem;
-  --bs-dropdown-link-color: var(--bs-black);
+  --bs-dropdown-link-color: var(--bs-light);
   --bs-dropdown-item-border-radius: 0;
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
-  --bs-dropdown-link-active-color: var(--bs-light);
-  --bs-dropdown-link-active-bg: var(--bs-black);
+  --bs-dropdown-link-active-color: var(--bs-secondary);
+  --bs-dropdown-link-active-bg: var(--bs-secondary);
 }
 
 /* list group */
@@ -214,8 +297,17 @@ a {
   --bs-link-hover-color-rgb: var(--bs-light-rgb);
 }
 
+.navbar {
+  --bs-navbar-active-color: #000000;
+}
+.navbar-nav {
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: #000000;
+}
 .text-white .nav-link {
-  --bs-nav-link-color: var(--bs-light);
+  --bs-nav-link-color: #000000;
   --bs-nav-link-hover-color: var(--bs-light);
   --bs-nav-link-active-color: var(--bs-light);
   --bs-navbar-active-color: var(--bs-light);
@@ -254,19 +346,20 @@ a {
   --bs-link-color-rgb: 255, 255, 255;
   --bs-link-hover-color-rgb: 255, 255, 255;
   --bs-body-color: #d1d1d1;
-  --bs-body-bg: #111;
-  --bs-body-bg-rgb: 17, 17, 41;
+  --bs-body-bg: #fde89d;
+  --bs-body-bg-rgb: rgb(253, 232, 157);
 }
 
 [data-bs-theme=dark] .dropdown-item {
-  --bs-dropdown-link-color: var(--bs-light);
-  --bs-dropdown-link-hover-color: var(--bs-white);
+  --bs-dropdown-link-color: var(--bs-secondary);
+  --bs-dropdown-link-hover-color: var(--bs-secondary);
 }
 
 [data-bs-theme=dark] .bg-white,
 [data-bs-theme=dark] .bg-light {
   --bs-bg-opacity: 0.1;
 }
+
 
 /* end of Bootstrap Color Theme */
 
@@ -295,6 +388,118 @@ a {
 /* slideshow */
 .slideshow {
   overflow: hidden;
+}
+
+.banner-content{
+  text-align: center;
+}
+
+.banner-item{
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Sección principal */
+.collection {
+  padding-top: 5rem; /* Para dar un poco más de espacio en la parte superior */
+  padding-bottom: 5rem; /* Espacio en la parte inferior */
+  background-color: var(--bs-secondary);
+}
+
+/* Título de la sección */
+.title-xlarge {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--bs-primary);
+  margin-bottom: 3rem;
+}
+
+/* Contenedor del texto */
+.collection-content {
+  background-color: #ffebc0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  justify-items: center;
+}
+
+/* Título del contenido */
+.collection-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--bs-secondary);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Párrafo del contenido */
+.collection-content p {
+  font-size: var(--bs-body-font-size);
+  color: var(--bs-body-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  
+}
+
+/* Botón de la sección */
+.collection-content .btn {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px; /* Bordes redondeados para el botón */
+  background-color: var(--bs-secondary);
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  justify-items: center;
+}
+
+/* Efecto hover del botón */
+.collection-content .btn:hover {
+  background-color: var(--bs-dark);
+  transform: scale(1.05); /* Escala un poco el botón */
+}
+
+
+.product-content {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto; /* Permite ajustar la altura al contenido */
+}
+
+/* Estilo general del texto del footer */
+#footer {
+  color: var(--footer-text-color);
+}
+
+/* Estilo para enlaces */
+#footer a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo específico para encabezados */
+#footer h5 {
+  color: var(--footer-text-color);
+}
+
+/* Ajusta colores de párrafos */
+#footer p {
+  color: var(--footer-text-color);
 }
 
 /* .slideshow .swiper-slide {
@@ -616,7 +821,7 @@ a {
 /** Search Popup
 --------------------------------------------------------------*/
 .search-popup {
-  background-color: #fff;
+  background-color: var(--bs-secondary);
   position: fixed;
   left: 0;
   top: 0;
@@ -786,25 +991,38 @@ a {
   width: 28px;
 }
 
+#billboard{
+  display: flex;
+}
+
+.container {
+  width: 100%;
+}
+
 
 /* Swiper */
 /* - Swiper Slide Arrows 1
 ------------------------------------------------------------- */
+
+.swiper-container {
+  position: relative;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  padding: 0 80px; /* Espacio para las flechas */
+}
 .icon-arrow {
   position: absolute;
   top: 50%;
   font-size: 2em;
-  color: var(--dark-color);
+  color: var(--bs-secondary);
   z-index: 8;
-  width: 130px;
-  height: 130px;
+  gap: 50px;
   border-radius: 50%;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #402b118f;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0.4;
+  opacity: 0.7;
   transition: opacity 0.3s ease-out;
 }
 
@@ -813,11 +1031,11 @@ a {
 }
 
 .icon-arrow.icon-arrow-left {
-  left: 30px;
+  left: 0px;
 }
 
 .icon-arrow.icon-arrow-right {
-  right: 30px;
+  right: 0px;
 }
 
 @media (max-width: 991px) {
@@ -882,10 +1100,20 @@ a {
   flex-wrap: wrap;
 }
 
-.image-zoom-effect .image-holder {
+.image-holder {
   width: 100%;
   height: auto;
   overflow: hidden;
+  aspect-ratio: 3 / 4; 
+  object-fit: cover; 
+  border-radius: 8px; 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9)
+}
+
+
+.image-zoom-effect .image-holder {
+  width: 100%;
+  height: auto;
   transform: scale(1);
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -903,6 +1131,16 @@ a {
 
 .image-zoom-effect:hover img {
   transform: scale(1.1);
+}
+
+#nameInput, #emailInput, #genreSelect {
+  background-color: #fde89d;
+  border-color: var(--bs-secondary);
+}
+
+.card{
+  background-color: #fde89d;
+  border-color: var(--bs-secondary);  
 }
 
 
@@ -1358,9 +1596,10 @@ a {
   font-weight: 600;
 }
 
+
 /* button */
 .btn-link {
-  font-size: 0.875rem;
+  font-size: 1.8rem;
   font-family: var(--bs-body-font-family);
   letter-spacing: 0.0875rem;
   text-transform: uppercase;
@@ -1513,7 +1752,7 @@ a.btn-link.text-light:after {
   display: block;
   padding: 10px;
   margin-bottom: 1.25rem;
-  border: 1px solid #EBEBEA;
+  border: 1px solid #000000;
 }
 
 .product-filter .accordion-body a:hover {
